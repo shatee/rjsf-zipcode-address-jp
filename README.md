@@ -10,6 +10,10 @@ Using [zipcloud API](http://zipcloud.ibsnet.co.jp/doc/api).
 [BSD 3-Clause License](./LICENSE).  
 and see [郵便番号検索API利用規約 - zipcloud](http://zipcloud.ibsnet.co.jp/rule/api)
 
+## Install
+
+`npm install rjsf-zipcode-address-jp`
+
 ## Usage
 
 ```tsx
