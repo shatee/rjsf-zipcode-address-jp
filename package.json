@@ -1,0 +1,69 @@
+{
+  "name": "rjsf-widget-zipcode-address-jp",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "lib",
+    "esm",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shatee/rjsf-widget-zipcode-address-jp.git"
+  },
+  "author": "shatee",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/shatee/rjsf-widget-zipcode-address-jp#readme",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@emotion/babel-preset-css-prop": "^10.0.27",
+    "@rjsf/core": "^2.2.1",
+    "@types/json-schema": "^7.0.4",
+    "@types/jsonp": "^0.2.0",
+    "@types/lodash": "^4.14.154",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "gh-pages": "^3.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "ts-loader": "^7.0.5",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --build tsconfig.json",
+    "build:esm": "tsc --build tsconfig.esm.json",
+    "example": "webpack-dev-server",
+    "deploy-example": "webpack && gh-pages -d example",
+    "lint": "eslint src/**/* --fix",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "jsonp": "^0.2.1"
+  }
+}
